@@ -1,0 +1,1 @@
+라우터, 서비스, 모델로 구분되는 Express의 3계층 구조 패턴을 흔히 "MVC"(Model-View-Controller) 아키텍처 패턴이라고 합니다. Express.js의 맥락에서:

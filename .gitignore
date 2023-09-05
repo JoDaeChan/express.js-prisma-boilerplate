@@ -1,9 +1,11 @@
 # dependencies
-node_modules
+back/node_modules
 
 *.env
-.idea
-.logs
+../.idea
 .yarn.lock
 .yarn-error
-.package-lock.json
+package-lock.json
+images
+/src/logs/
+/node_modules/
