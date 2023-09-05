@@ -11,19 +11,19 @@ datasource db {
 }
 
 model User {
-  id             Int       @id @default(autoincrement())
-  email          String?   @unique
-  name           String?
-  nickname       String?   @unique
-  password       String?
-  socialId       String?
-  socialProvider String?
-  profileImage   String?
-  createdAt      DateTime  @default(now())
-  updatedAt      DateTime  @updatedAt
-  post           Post[]
-  comment        Comment[]
-  manager        Boolean   @default(false)
+  id           Int       @id @default(autoincrement())
+  email        String?   @unique
+  name         String?
+  nickname     String?   @unique
+  password     String?
+  snsId        String?
+  snsProvider  String?
+  profileImage String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  post         Post[]
+  comment      Comment[]
+  manager      Boolean   @default(false)
 }
 
 model Post {

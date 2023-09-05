@@ -9,3 +9,5 @@ package-lock.json
 images
 /src/logs/
 /node_modules/
+/.editorconfig
+/.prettierrc

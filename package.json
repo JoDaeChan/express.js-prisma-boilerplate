@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npx prisma generate --schema=./prisma/schema.prisma && nodemon index.js --exec babel-node",
     "start:prod": "npx prisma generate --schema=./prisma/schema.prisma && index.js --exec babel-node",
+    "swagger-autogen": "node ./src/config/swagger.js",
     "test": "jest --setupFiles dotenv/config"
   },
   "keywords": [],
@@ -29,7 +30,9 @@
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0",
     "passport-jwt": "^4.0.1",
+    "passport-kakao": "^1.0.1",
     "passport-local": "^1.0.0",
+    "process": "^0.11.10",
     "uuid": "^9.0.0",
     "winston": "^3.10.0",
     "winston-daily-rotate-file": "^4.7.1",
@@ -45,6 +48,7 @@
     "nodemon": "^2.0.15",
     "prettier": "^3.0.1",
     "prisma": "^5.2.0",
+    "swagger-autogen": "^2.23.5",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"
   },

@@ -9,16 +9,16 @@ commentRouter.post("/comment", passportJwt, commentController.createComment);
 
 /** @description 댓글 수정 */
 commentRouter.put(
-    "/comment/:commentId",
-    passportJwt,
-    commentController.updateComment,
+	"/comment/:commentId",
+	passportJwt,
+	commentController.updateComment,
 );
 
 /** @description 댓글 삭제 */
 commentRouter.delete(
-    "/comment/:commentId",
-    passportJwt,
-    commentController.deleteComment,
+	"/comment/:commentId",
+	passportJwt,
+	commentController.deleteComment,
 );
 
 module.exports = commentRouter;

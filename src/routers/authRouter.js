@@ -1,3 +1,4 @@
+// import passport from "passport";
 import Router from "express";
 import multer from "multer";
 import authController from "../controllers/authController";
@@ -5,21 +6,26 @@ import passportLocal from "../middlewares/passportLocal";
 import passportJwt from "../middlewares/passportJwt";
 import storage from "../utils/storage";
 const upload = multer({ storage });
-
 const authRouter = Router();
 
-/** @description 회원가입 */
+/**
+ * @swagger
+ * tags:
+ *   name: Users
+ *   description: 유저 추가 수정 삭제 조회
+ */
 authRouter.post("/auth/signup", authController.createUser);
 
-/** @description 로그인 */
 authRouter.post("/auth/login", passportLocal, authController.login);
 
-/** @description 프로필 이미지 업로드 */
 authRouter.post(
-    "/auth/profile-image",
-    passportJwt,
-    upload.single("profileImage"),
-    authController.uploadProfileImage,
+	"/auth/profile-image",
+	passportJwt,
+	upload.single("profileImage"),
+	authController.uploadProfileImage,
 );
+
+// authRouter.get("/kakao", passport.authenticate("kakao"));
+// authRouter.get("/callback", authController.kakaoCallback);
 
 module.exports = authRouter;
